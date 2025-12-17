@@ -165,8 +165,29 @@ independently.
 - leaf_mistral.json
 - leaf_perplexity.json
 
+## Independent Review Receipts (Leaf Records)
+
+These are the eight independently minted review receipts (one per platform).  
+Each file can be verified on its own via SHA-256.
+
+- `leaf_chatgpt.json` — `bca72f5f44da218756e0d6ea8cc320d2979b2f2106b931c72aa7bd3b5d9da44e`
+- `leaf_claude.json` — `380ce103dc8522a3712563a51b8f4fd1658e7fa7f62350b6fa4c90bd79bcb815`
+- `leaf_copilot.json` — `4a9500bea2d18769fc0b0408bb76698e294aae2ab8ba7cd2c6b56c1038087dde`
+- `leaf_gemini.json` — `65402f3f0d931ea249a1b863dd0c13dc78b96322b9194d5e3b8ddf462999cc98`
+- `leaf_grok.json` — `a412a30e6b45232f1559eb81fd7e5260cf36a1fab42112ad9a8931ad6dfe53cb`
+- `leaf_kimi.json` — `6f28620e0b2f6fd2b37c02a9902e722b2fbac12140a3c1bf3dd99a2af7ed00d4`
+- `leaf_mistral.json` — `1921cae2a736db5506bf39cdaff14efdb5064937537f51dcbbff03ca8a2fa158`
+- `leaf_perplexity.json` — `6e369d590608d2e830674312e0785cb4f29d19d33d782abf99e2ad35631a2493`
+
+## Group Merkle Seal (MH8 Mother Tree)
+
+This file commits to the complete ordered set of the eight leaf hashes above using a deterministic Merkle tree.  
+Merkle root proves set integrity + ordering; it does not certify truth.
+
+- `mh8_mother_tree_merkle.json` — envelope hash: `b06744e8e628bff0990f5ce185c1ffa85786bf6bbfd6db9a5798e86a1091f88c`
+- Merkle root: `ecd923a0601ff45df4726d65b415fd976b2122bcd2b5bfa07966aa99d067002f`
 - 
-{ … CHATGPT … }
+
 bca72f5f44da218756e0d6ea8cc320d2979b2f2106b931c72aa7bd3b5d9da44e
 
 {
@@ -179,7 +200,6 @@ bca72f5f44da218756e0d6ea8cc320d2979b2f2106b931c72aa7bd3b5d9da44e
   "integrity_rule": "NON-COPIABLE WHEN HASH-CHAIN BROKEN"
 } 
 
-{ … CLAUDE … }
 380ce103dc8522a3712563a51b8f4fd1658e7fa7f62350b6fa4c90bd79bcb815
 {
   "mh8_system": "MH8-TREASURY-SHA-256-MINT",
@@ -191,7 +211,6 @@ bca72f5f44da218756e0d6ea8cc320d2979b2f2106b931c72aa7bd3b5d9da44e
   "integrity_rule": "NON-COPIABLE WHEN HASH-CHAIN BROKEN"
 }
 
-{ … Microsoft Copilot … }
 4a9500bea2d18769fc0b0408bb76698e294aae2ab8ba7cd2c6b56c1038087dde
 {
   "mh8_system": "MH8-TREASURY-SHA-256-MINT",
@@ -203,7 +222,6 @@ bca72f5f44da218756e0d6ea8cc320d2979b2f2106b931c72aa7bd3b5d9da44e
   "integrity_rule": "NON-COPIABLE WHEN HASH-CHAIN BROKEN"
 }  
 
-{ … GEMINI … }
 65402f3f0d931ea249a1b863dd0c13dc78b96322b9194d5e3b8ddf462999cc98
 {
   "mh8_system": "MH8-TREASURY-SHA-256-MINT",
@@ -215,7 +233,6 @@ bca72f5f44da218756e0d6ea8cc320d2979b2f2106b931c72aa7bd3b5d9da44e
   "integrity_rule": "NON-COPIABLE WHEN HASH-CHAIN BROKEN"
 } 
 
-{ … GROK … }
 a412a30e6b45232f1559eb81fd7e5260cf36a1fab42112ad9a8931ad6dfe53cb
 {
   "mh8_system": "MH8-TREASURY-SHA-256-MINT",
@@ -227,7 +244,6 @@ a412a30e6b45232f1559eb81fd7e5260cf36a1fab42112ad9a8931ad6dfe53cb
   "integrity_rule": "NON-COPIABLE WHEN HASH-CHAIN BROKEN"
 }
 
-{ … KIMI … }
 6f28620e0b2f6fd2b37c02a9902e722b2fbac12140a3c1bf3dd99a2af7ed00d4
 {
   "mh8_system": "MH8-TREASURY-SHA-256-MINT",
@@ -239,7 +255,6 @@ a412a30e6b45232f1559eb81fd7e5260cf36a1fab42112ad9a8931ad6dfe53cb
   "integrity_rule": "NON-COPIABLE WHEN HASH-CHAIN BROKEN"
 } 
 
-{ … MISTRAL … }
 1921cae2a736db5506bf39cdaff14efdb5064937537f51dcbbff03ca8a2fa158
 {
   "mh8_system": "MH8-TREASURY-SHA-256-MINT",
@@ -251,7 +266,6 @@ a412a30e6b45232f1559eb81fd7e5260cf36a1fab42112ad9a8931ad6dfe53cb
   "integrity_rule": "NON-COPIABLE WHEN HASH-CHAIN BROKEN"
 } 
 
-{ … PERPLEXITY … }
 6e369d590608d2e830674312e0785cb4f29d19d33d782abf99e2ad35631a2493
 {
   "mh8_system": "MH8-TREASURY-SHA-256-MINT",
